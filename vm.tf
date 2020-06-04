@@ -52,6 +52,8 @@ resource "azurerm_virtual_machine" "main" {
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
+    disk_size_gb      = 30
+    os_type           = "Linux"
   }
   os_profile {
     computer_name  = "hostname"

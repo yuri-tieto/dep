@@ -5,11 +5,7 @@ provider "azurerm" {
   subscription_id = data.terraform_remote_state.main.outputs.subscription_id
   tenant_id       = data.terraform_remote_state.main.outputs.tenant_id
 
-  features {
-    key_vault {
-      purge_soft_delete_on_destroy = true
-    }
-  }
+  features {}
 }
 
 data "azurerm_client_config" "current" {}
